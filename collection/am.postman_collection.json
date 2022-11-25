@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "5c410ced-99b4-4c2c-a32b-2927b21ea744",
+		"name": "am",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22581558"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Check Gmail Verified",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ngominhdai92tn@gmail.com\",\r\n    \"otpCode\": \"461383\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/user/checkGmailVerify",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"checkGmailVerify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset Pass",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzM2Y5OGE0ODU1ZGI3N2UxNWI2N2M2ZCIsImVtYWlsIjoibmdvbWluaGRhaTkydG5AZ21haWwuY29tIiwiaWF0IjoxNjY1MTEyMjc2LCJleHAiOjE2NjUxMTMxNzZ9.mAjVJvvIH7v3yzwXeUWWCUo-kP4pp77kJaJQgG_nhjw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ngominhdai92tn@gmail.com\",\r\n    \"password\": \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/user/resetPassword",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gmail Verified",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "v2.local.hsBzBwWpKKBc1mld2vD3D9v4KlKOliJoTKyVPdW3LiNWC7hdMe6aNCj55Tbeo7SgNCuzbT3gVBGC-USPdm0t-JboaDL34Pni6ixMl4unOg0VKm3mIIGSoa0uOmbMllP-oDosG-ox172gBzJVRS5bpTz-h_JSuqDvkFWx0y339DBJL14WEwzh6a8R2jIQWojnypA5P1NapzAWbX8Q8tbWz1ELR5CIB17UpC_yUUmG6vqwcBW_79pxUxlHMs_BC8J8cEB8Sp-QOP3o0vQwMLZkNOa1p5e7UyutwQ_32Bdu0niuOlMoxqnG.bnVsbA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"ngominhdai92tn@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/user/gmailVerify",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"gmailVerify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"anhtriet172@gmail.com\",\r\n    \"fullName\":\"NMD\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/user/createUser",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ngominhdai92tn@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/user/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "create product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/product/create",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/product?id=6368d4be48453b5d86cf71ca&deviceId=123412321",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"product"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6368d4be48453b5d86cf71ca"
+								},
+								{
+									"key": "deviceId",
+									"value": "123412321"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"6369b52981cc73c98d6dc948\",\n    \"ownerDeviceId\": \"1acaadsad2\",\n    \"name\": \"Minh Dai\",\n    \"isVerify\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/product",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "localhost:3000",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "baseURL",
+			"value": "https://bkenglish-9ec8e.et.r.appspot.com",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "baseURL",
+			"value": "https://myenglisk.et.r.appspot.com",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "baseURL",
+			"value": "https://dragon-fisk.et.r.appspot.com",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "baseURL",
+			"value": "https://ambe-api.et.r.appspot.com",
+			"type": "string"
+		}
+	]
+}
