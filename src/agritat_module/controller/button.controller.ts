@@ -10,12 +10,12 @@ import {
   Put,
 } from '@nestjs/common';
 import { query, Request } from 'express';
-import { CreateButtonReq, UpdateButtonStatusReq } from '../../request';
-import { AuthMiddleware } from '../../../nmd_core/common/middlewares/bearer.middleware';
-import { ValidationPipe } from '../../../nmd_core/common/pipes/validation.pipe';
-import { ReturnInternalServerError } from '../../../nmd_core/common/utils/custom.error';
-import { PagingPipe } from '../../../nmd_core/common/pipes/paging.pipe';
-import { ButtonService } from '../../service/button/button.service';
+import { CreateButtonReq, UpdateButtonStatusReq } from '../request';
+import { AuthMiddleware } from '../../nmd_core/common/middlewares/bearer.middleware';
+import { ValidationPipe } from '../../nmd_core/common/pipes/validation.pipe';
+import { ReturnInternalServerError } from '../../nmd_core/common/utils/custom.error';
+import { PagingPipe } from '../../nmd_core/common/pipes/paging.pipe';
+import { ButtonService } from '../service/button.service';
 
 @Controller('/button')
 export class ButtonController {

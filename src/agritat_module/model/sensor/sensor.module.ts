@@ -1,21 +1,21 @@
 import { Module } from '@nestjs/common';
-import { ProductRepo } from '../../repo';
-import { ProductService } from '../../service/product.service';
+import { SensorRepo } from '../../repo';
+import { SensorService } from '../../service/sensor.service';
 import { AuthMiddleware } from '../../../nmd_core/common/middlewares/bearer.middleware';
-import { ProductController } from '../../controller/product/product.controller';
+import { SensorController } from '../../controller/sensor.controller';
 import { ResponseService } from '../../../nmd_core/shared/response.service';
 import { UserRepo } from '../../../auth_modules/repo';
 
 @Module({
   imports: [],
-  controllers: [ProductController],
+  controllers: [SensorController],
   providers: [
-    ProductRepo,
-    ProductService,
+    SensorRepo,
+    SensorService,
     AuthMiddleware,
     UserRepo,
     ResponseService,
   ],
   exports: [],
 })
-export class ProductModule {}
+export class SensorModule {}

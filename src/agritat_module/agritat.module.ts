@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
-import { UserModule } from '../auth_modules/model/user/user.module';
-import { ButtonModule } from './module/button/button.module';
+import { ButtonModule } from './model/button/button.module';
+import { PlantModule } from './model/plant/plant.module';
+import { SensorModule } from './model/sensor/sensor.module';
 @Module({
-  imports: [UserModule, ButtonModule],
+  imports: [ButtonModule, SensorModule, PlantModule],
 })
 export class AgritatModule {}

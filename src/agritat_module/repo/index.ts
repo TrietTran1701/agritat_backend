@@ -1,5 +1,5 @@
-// authen
-export * from '../../auth_modules/repo';
-
 // button
-export * from './button/button.repo';
+export * from './button.repo';
+
+export * from './plant.repo';
+export * from './sensor.repo';

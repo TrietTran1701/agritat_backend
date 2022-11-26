@@ -1,1 +1,5 @@
-export * from './button/button';
+export * from './button';
+
+export * from './plant';
+
+export * from './sensor';

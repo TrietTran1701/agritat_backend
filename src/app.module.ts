@@ -11,6 +11,7 @@ import { join } from 'path';
 import { DatabaseModule } from './nmd_core/database';
 import { AMModule } from './am_modules/am.module';
 import { AgritatModule } from './agritat_module/agritat.module';
+import { UserModule } from './auth_modules/model/user/user.module';
 @Module({
   imports: [
     ConfigModule,
@@ -23,10 +24,7 @@ import { AgritatModule } from './agritat_module/agritat.module';
       exclude: ['/api*'],
     }),
 
-    // BkEModule,
-    // AMModule,
-
-    // AgritatModule
+    UserModule,
     AgritatModule,
   ],
   controllers: [AppController],

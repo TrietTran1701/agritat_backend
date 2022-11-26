@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { ObjectId } from 'mongoose';
-import { ResponseService } from '../../../nmd_core/shared/response.service';
-import { IFResponse } from '../../../nmd_core/shared/response.interface';
+import { ResponseService } from '../../nmd_core/shared/response.service';
+import { IFResponse } from '../../nmd_core/shared/response.interface';
 // import { Product, ProductModel } from '../../model/product/product.model';
-import { Button, ButtonModel } from '../../model/button/button.model';
+import { Button, ButtonModel } from '../model/button/button.model';
 import mongoose from 'mongoose';
 
 @Injectable()
@@ -17,10 +17,12 @@ export class ButtonRepo {
 
     return res;
   }
+
   async getById(id: ObjectId): Promise<ButtonModel> {
     const res: ButtonModel = await Button.findById(id);
     return res;
   }
+
   async upsert(id: ObjectId, status: any): Promise<ButtonModel> {
     const button = await Button.findByIdAndUpdate(
       { _id: id },
@@ -29,11 +31,13 @@ export class ButtonRepo {
     );
     return button;
   }
+
   async create(item: any): Promise<ButtonModel> {
     const button = new Button(item);
     await button.save();
     return button;
   }
+
   //   async findAllAndPaging(
   //     { page, limit, sort }: { page: number; limit: number; sort?: any },
   //     filter?: any,
@@ -52,10 +56,12 @@ export class ButtonRepo {
   //       +limit,
   //     );
   //   }
+
   async getAll({}, filter?: any): Promise<ButtonModel[]> {
     const buttons: ButtonModel[] = await Button.find(filter);
     return buttons;
   }
+
   async delete(id: ObjectId) {
     await Button.findByIdAndRemove(id);
     return;

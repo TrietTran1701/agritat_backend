@@ -1,21 +1,21 @@
 import { Module } from '@nestjs/common';
-import { ProductRepo } from '../../repo';
-import { ProductService } from '../../service/product.service';
+import { PlantRepo } from '../../repo';
+import { PlantService } from '../../service/plant.service';
 import { AuthMiddleware } from '../../../nmd_core/common/middlewares/bearer.middleware';
-import { ProductController } from '../../controller/product/product.controller';
+import { PlantController } from '../../controller/plant.controller';
 import { ResponseService } from '../../../nmd_core/shared/response.service';
 import { UserRepo } from '../../../auth_modules/repo';
 
 @Module({
   imports: [],
-  controllers: [ProductController],
+  controllers: [PlantController],
   providers: [
-    ProductRepo,
-    ProductService,
+    PlantRepo,
+    PlantService,
     AuthMiddleware,
     UserRepo,
     ResponseService,
   ],
   exports: [],
 })
-export class ProductModule {}
+export class PlantModule {}
