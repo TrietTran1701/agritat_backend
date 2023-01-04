@@ -8,4 +8,5 @@ export class CreateButtonReq {
 export class UpdateButtonStatusReq {
   id: ObjectId;
   status: string;
+  gardenOwnerId: ObjectId;
 }

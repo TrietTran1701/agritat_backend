@@ -10,5 +10,5 @@ export class UpdatePlantReq {
   id: ObjectId;
   name: string;
   isInfected: boolean;
-  gardenOwnerId: string;
+  gardenOwnerId: ObjectId;
 }

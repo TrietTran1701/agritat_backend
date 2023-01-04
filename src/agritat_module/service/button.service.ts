@@ -36,6 +36,7 @@ export class ButtonService {
 
     const updatedData = {
       status: updateButtonReq.status,
+      gardenOwnerId: updateButtonReq.gardenOwnerId,
     };
 
     const newBtn = await this.buttonRepo.upsert(
